@@ -8,8 +8,7 @@ while True:
 2. base64
 3. hash
 q. quit
-''').lower().strip()
-    print()
+> ''').lower().strip()
     
     if choice == "1":
         # reverse
@@ -32,9 +31,13 @@ q. quit
         continue
     
     if parsed == "quit":
+        print()
+        print("quit")
         continue
     else:
+        print()
         print(f"output:\n{parsed}")
+        print()
     
 
 print("program exited. have a nice day!")

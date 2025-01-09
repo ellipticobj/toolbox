@@ -15,7 +15,8 @@ def blake2(data: str) -> str:
 def ripemd160(data: str) -> str:
     return hashlib.new("ripemd160", data.encode()).hexdigest()
 
-def inputhandler():
+def inputhandler() -> str:
+    print()
     while True:
         choice = input('''1. md5
 2. sha256
