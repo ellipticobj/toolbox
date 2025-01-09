@@ -2,6 +2,7 @@ import b64
 import hasher
 import reverse
 
+
 while True:
     choice = input('''1. reverse
 2. base64

@@ -38,5 +38,3 @@ q. quit
             print("please input a proper input")
             print()
             continue
-        
-print(inputhandler())

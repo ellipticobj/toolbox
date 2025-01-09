@@ -1,21 +1,19 @@
-from base64 import *
 import base64
 
 def encode(plain: str) -> str:
     if not plain:
         raise ValueError("variable plain cannot be empty")
     
-    return str(b64encode(plain.encode("utf-8")))
+    return str(base64.b64encode(plain.encode("utf-8")))
 
 def decode(enc: str, utfdecode: bool = True) -> str:
     if not enc:
         raise ValueError("variable enc cannot be empty")
     
-    return str(b64decode(enc).decode('utf-8')) if utfdecode else str(b64decode(enc))
+    return str(base64.b64decode(enc).decode('utf-8')) if utfdecode else str(b64decode(enc))
 
 def inputhandler():
     while True:
-        print("base64")
         choice = input('''
 1. encode
 2. decode
@@ -54,5 +52,3 @@ q. quit
             print("please input one of the options")
             print()
             continue
-        
-print(inputhandler())
