@@ -22,15 +22,18 @@ def inputhandler():
 3. sha1
 4. blake2
 5. ripemd160
+q. quit
 > ''')
         print()
-        data = input("input string to hash: ")
+        if choice != 'q':
+            data = input("input string to hash: ")
         
         if choice == "1": return md5(data)
         elif choice == "2": return sha256(data)
         elif choice == "3": return sha1(data)
         elif choice == "4": return blake2(data)
         elif choice == "5": return ripemd160(data)
+        elif choice == "q": return "quit"
         else:
             print("please input a proper input")
             print()
